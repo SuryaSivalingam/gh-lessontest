@@ -6,7 +6,7 @@ jobs:
   build:
     permissions:
       checks: write
-      pull_request: write
+      pull_requests: write
       contents: write
     runs-on: ubuntu-latest
     steps:
