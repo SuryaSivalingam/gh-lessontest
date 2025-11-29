@@ -1,4 +1,4 @@
-gh_secret = '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'
+// gh_secret = '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'
 
 function multiply(num1,num2){
     return num1*num2;
