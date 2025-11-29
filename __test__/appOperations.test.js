@@ -5,5 +5,5 @@ test("multiplication of two numbers", ()=>{
 });
 
 test("addition of two numbers", ()=>{
-    expect(appOperations.multiply(12,27).toBe(39));
+    expect(appOperations.add(12,27).toBe(39));
 });
