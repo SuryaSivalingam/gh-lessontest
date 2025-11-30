@@ -4,13 +4,12 @@
   "description": "Demo application for Github Actions Workshop",
   "main": "/src/appOperations.js",
   "files": ["/src"],
-  
   "scripts": {
     "test": "jest --coverage"
   },
   "publishConfig": {
-  "registry": "https://npm.pkg.github.com/"
-},
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/SuryaSivalingam/gh-lessontest.git"
