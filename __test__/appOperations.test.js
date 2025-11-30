@@ -13,5 +13,5 @@ test("subtraction of two numbers", ()=>{
 });
 
 test("division of two numbers", ()=>{
-    expect(appOperations.subtract(25,5)).toBe(5);
+    expect(appOperations.divide(25,5)).toBe(5);
 });
