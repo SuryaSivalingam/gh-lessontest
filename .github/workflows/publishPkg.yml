@@ -2,30 +2,43 @@ name: Publish GitHub Package
 
 on:
   release:
-    types: [created]
+    types: [created]  # Trigger workflow on new release
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write       # Needed to push version bump
       packages: write
 
     steps:
-      # 1️⃣ Checkout the repo
+      # 1️⃣ Checkout repository
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true  # Required for git push
 
       # 2️⃣ Set up Node and GitHub Packages registry
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           registry-url: "https://npm.pkg.github.com"
-          scope: "@suryasivalingam"  # MUST match lowercase scope in package.json
+          scope: "@suryasivalingam"  # Must match lowercase scope in package.json
 
       # 3️⃣ Install dependencies
       - run: npm ci
 
-      # 4️⃣ Publish to GitHub Packages using GITHUB_TOKEN
-      - run: npm publish
+      # 4️⃣ Bump patch version automatically
+      - name: Bump version
+        run: |
+          npm version patch -m "chore: bump version to %s [skip ci]"
+
+      # 5️⃣ Push version bump commit and tag
+      - name: Push version bump
+        run: |
+          git push origin HEAD --tags
+
+      # 6️⃣ Publish to GitHub Packages
+      - name: Publish package
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
