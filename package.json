@@ -1,6 +1,6 @@
 {
-  "name": "gh-lessontest",
-  "version": "1.1.0",
+  "name": "@SuryaSivalingam/gh-lessontest",
+  "version": "1.1.1",
   "description": "Demo application for Github Actions Workshop",
   "main": "/src/appOperations.js",
   "files": ["/src"],
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SuryaSivalingam/gh-lessontest.git"
+    "url": "https://github.com/SuryaSivalingam/gh-lessontest.git"
   },
   "keywords": [],
   "author": "",
