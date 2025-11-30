@@ -1,5 +1,5 @@
 {
-  "name": "@SuryaSivalingam/gh-lessontest",
+  "name": "@suryasivalingam/gh-lessontest",
   "version": "1.1.1",
   "description": "Demo application for Github Actions Workshop",
   "main": "/src/appOperations.js",
