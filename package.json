@@ -8,6 +8,9 @@
   "scripts": {
     "test": "jest --coverage"
   },
+  "publishConfig": {
+  "registry": "https://npm.pkg.github.com/"
+},
   "repository": {
     "type": "git",
     "url": "https://github.com/SuryaSivalingam/gh-lessontest.git"
