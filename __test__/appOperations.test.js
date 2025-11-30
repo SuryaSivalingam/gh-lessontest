@@ -11,3 +11,7 @@ test("addition of two numbers", ()=>{
 test("subtraction of two numbers", ()=>{
     expect(appOperations.subtract(27,12)).toBe(15);
 });
+
+test("division of two numbers", ()=>{
+    expect(appOperations.subtract(25,5)).toBe(5);
+});

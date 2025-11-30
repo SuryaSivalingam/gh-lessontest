@@ -1,7 +1,7 @@
 {
   "name": "gh-lessontest",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Demo application for Github Actions Workshop",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage"
